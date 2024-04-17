@@ -5,6 +5,7 @@ WORKDIR /app
 ADD . /app
 
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
+RUN pip install --upgrade pip
 
 EXPOSE 8080
 
