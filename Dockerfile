@@ -1,12 +1,13 @@
-FROM python:3.7-slim:latest
+FROM python:3.7-slim
 
 WORKDIR /app
 
 ADD . /app
 
-RUN apt-get update && apt-get upgrade -y
-RUN pip install -r requirements.txt
+RUN pip install
 RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+
 
 EXPOSE 8080
 
