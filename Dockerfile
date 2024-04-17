@@ -1,13 +1,11 @@
-FROM python:3.7-slim
+FROM python:3.10
 
 WORKDIR /app
 
 ADD . /app
 
 
-RUN pip install --upgrade pip
-RUN pip install --upgrade Flask
-RUN pip install -r requirements.txt
+RUN pip install --quiet --requirement requirements.txt
 
 
 EXPOSE 8080
