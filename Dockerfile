@@ -1,9 +1,10 @@
-FROM python:3.7-slim
+FROM python:3.7-slim:latest
 
 WORKDIR /app
 
 ADD . /app
 
+RUN apt-get update && apt-get upgrade -y
 RUN pip install -r requirements.txt
 RUN pip install --upgrade pip
 
